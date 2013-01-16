@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OPTICS algorithm</title>
+  <link rel="stylesheet" type="text/css" media="all" href="style.css">
+  <script src="//www.google.com/jsapi"></script>
+  <script>google.load('visualization', '1', { packages: ['corechart'] });</script>
+</head>
+<body id="no-js">
+  <div id="wrapper">
+    <h1>OPTICS algorithm</h1>
+    <p>More info about the OPTICS algorithm can be found at <a target="_blank" href="//en.wikipedia.org/wiki/OPTICS_algorithm">Wikipedia</a>.</p>
+    <noscript>JavaScript seems to be disabled in your browser. The OPTICS algorithm is implemented in pure JavaScript, in order to test it you’ll have to enable JavaScript.</noscript>
+    <form id="form" action="index.html" method="post">
+      <div id="input-container">
+        <p id="input-label-wrapper"><label id="input-label" for="input">Input data:</label></p>
+        <p id="input-wrapper"><textarea id="input" name="input" required="required" placeholder="x-coordinate y-coordinate name"></textarea></p>
+        <p id="use-default-input-wrapper"><input id="use-default-input" name="use-default-input" type="checkbox"> <label id="use-default-label" for="use-default-input">use default input?</label></p>
+      </div>
+      <div id="options-container">
+        <p id="min-points-wrapper"><label for="min-points">Minimum points:</label> <input id="min-points" name="min-points" type="number" placeholder="e.g. 3" required="required" step="1" min="1"></p>
+        <p id="core-distance-wrapper"><label for="core-distance">Core distance (ε):</label> <input id="core-distance" name="core-distance" type="number" placeholder="e.g. 100" required="required" step="10" min="10"></p>
+      </div>
+      <p id="commit-wrapper"><input id="commit" name="commit" type="submit" value="Process"></p>
+    </form>
+    <div id="processing"></div>
+    <div id="output">
+      <div id="text-output" class="clearfix">
+        <div class="float-left">
+          <h2>Core distances</h2>
+          <div id="core-distances-output"></div>
+        </div>
+        <div class="float-left">
+          <h2>Reachability</h2>
+          <div id="reachability-output"></div>
+        </div>
+      </div>
+      <h2>Bubble chart</h2>
+      <p>The first object goes to infinity, therefor I set it to zero while creating the data for the Google chart API, otherwise the chart wouldn’t look as good as it does right now.</p>
+      <div id="google-bubble-chart"></div>
+      <h2>Bar chart</h2>
+      <p>The first object goes to infinity and the Google chart API simply ignores that value (for a good reason).</p>
+      <div id="google-column-chart"></div>
+      <h2>Important note!</h2>
+      <p>While the algorithm works and is fast, there’s still much room for improvement. The JavaScript is rather ugly, things could be encapsulated into (quasi) classes and everything put into nice data structures with a clearly defined interface to access properties. But my time is limited and this is only a bonus task (which doesn’t mean that I don’t care about it, I invested a lot of work into this and played around for many, many hours).</p>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="optics.min.js"></script>
+</body>
+</html>
