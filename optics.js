@@ -1,7 +1,24 @@
+/*!
+ * This file is part of fleshgrinder/fhs-masters-thesis-benchmarks.
+ *
+ * fleshgrinder/fhs-masters-thesis-benchmarks is free software: you can redistribute it and/or modify it under the terms
+ * of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * fleshgrinder/fhs-masters-thesis-benchmarks is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with fleshgrinder/fhs-masters-thesis-
+ * benchmarks. If not, see <https://www.gnu.org/licenses/agpl-3.0.html>.
+ */
+
 /**
  * OPTICS algorithm.
  *
- * @author Richard Fussenegger <richard@fussenegger.info>
+ * @author Richard Fussenegger <richard@fussenegger.info>]
+ * @copyright 2013 (c) Richard Fussenegger
+ * @license https://www.gnu.org/licenses/agpl-3.0.html AGPL-3.0
  */
 
 /**
